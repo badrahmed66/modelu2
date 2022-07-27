@@ -1,70 +1,59 @@
 * {
+  margin: 0;
   padding: 0;
-  margin: 0; 
   box-sizing: border-box;
 }
-
-h1 {
-  text-align: center;
-  margin: 40px;
-}
-
 .parent {
-display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-align-items: space-between;
-
-}
-.child {
-  border: 1px solid #000;
-  background: #eee;
-  position: relative;
-  width: 30%;
-  margin-bottom: 20px;
-  
-}
-
-.child p {
   padding: 10px;
-  margin-top: 50px;
-  font-size:  18px
+  margin: 50px 20px ;
 }
+.parent .clear {
+  clear: both;
 
+}
+.parent .child {
+  float: left;
+  margin-left: 20px;
+  width: calc((100% - 80px) / 3);
+  background: rgb(228, 226, 222);
+  border: 2px solid;
+}
 .child h3 {
-  font-size: 25px;
+  border: 2px solid;
   text-align: center;
-  border: 1px solid #000;
+  padding: 5px 20px;
   width: 150px;
-  padding: 10px 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-left: auto;
+  font-size: 30px;
 }
-
-.one h3 {
-  background: rgb(190, 116, 135)
+.child > p {
+  padding: 10px;
+  font-size: 20px;
 }
-.two h3 {
-  background: rgb(216, 60, 60);
+.first > h3 {
+  background: rgb(235, 110, 60);
 }
-.three h3 {
-  background: rgb(219, 219, 55);
+.second > h3 {
+  background: rgb(47, 207, 87);
 }
-
-@media (max-width: 767px) {
-  .parent .child {
-    width: 90%;
-
-  }
+.third > h3 {
+  background: rgb(65, 105, 236);
 }
 @media (min-width: 768px) and (max-width: 991px){
-.parent .one, .two{
-  width: calc(90%  / 2);
+  .parent .first, .parent .second {
+    width: calc((100% - 60px) / 2);
+  }
+  .parent .third {
+    width: calc((100% - 40px) / 1);
+    margin-top: 10px;
+  }
 }
-.parent .three {
-  width: 93%;
+@media (max-width: 767px) {
+  .parent .child {
+    width: calc((100% - 40px) / 1);
+    margin-bottom: 10px;
+  }
 }
+h1 {
+  text-align: center;
 }
-
-
