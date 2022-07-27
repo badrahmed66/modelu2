@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+}
+
+.parent {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+align-items: space-between;
+
+}
+.child {
+  border: 1px solid #000;
+  background: #eee;
+  position: relative;
+  width: 30%;
+  margin-bottom: 20px;
+  
+}
+
+.child p {
+  padding: 10px;
+  margin-top: 50px;
+  font-size:  18px
+}
+
+.child h3 {
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid #000;
+  width: 150px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.one h3 {
+  background: rgb(190, 116, 135)
+}
+.two h3 {
+  background: rgb(216, 60, 60);
+}
+.three h3 {
+  background: rgb(219, 219, 55);
+}
+
+@media (max-width: 767px) {
+  .parent .child {
+    width: 90%;
+
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+.parent .one, .two{
+  width: calc(90%  / 2);
+}
+.parent .three {
+  width: 93%;
+}
+}
+
+
